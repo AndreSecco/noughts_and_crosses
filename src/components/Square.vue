@@ -11,7 +11,7 @@ export default {
             this.$store.commit('makeMove', this.index);
         },
     },
-    computed: {
+    computed: { 
 
         // backgroundButton() {
         //     const currentPlayer = this.$store.state.currentPlayer;
