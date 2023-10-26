@@ -1,0 +1,126 @@
+body {
+    background: rgb(159,6,121);
+    background: radial-gradient(circle, #9f0679 0%, #52003e 39%, rgba(23,0,17,1) 100%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  body:after{
+    background-image: linear-gradient(45deg, #ff007e 0%, #2e0017 90%);
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 4px;
+    grid-gap: 4px; /* Adiciona espaçamento entre as células (gap) */
+    background: transparent;
+    border-radius: 25px;
+  }
+  
+  button.x::after {
+    display: none;
+  }
+  
+  button.o::after {
+    display: none;
+  }
+  
+  /* Novos estilos para 'X' e 'O' */
+  button.x {
+    text-shadow: 
+      #FF2D95 0px 0px 20px, 
+      #FF2D95 0px 0px 40px, 
+      #FF2D95 0px 0px 50px, 
+      #FF2D95 0px 0px 75px;
+    color: #FF2D95;
+  }
+  
+  button.o {
+    text-shadow: 
+    #00ffff 0px 0px 20px, 
+    #00ffff 0px 0px 40px, 
+    #00ffff 0px 0px 50px, 
+    #00ffff 0px 0px 75px;
+    color: #00ffff; /* Cor do texto para 'O' */
+  }
+
+  button {
+    width: 100px;
+    height: 100px;
+    font-size: 3em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background: #52003e;
+    border-radius: 25px;
+    transition: 0.5s;
+    /* color: #FFFFFF; */
+    /* text-shadow:  */
+    /* #FFF 0px 0px 5px, 
+    #FFF 0px 0px 10px, 
+    #FFF 0px 0px 15px,  */
+    /* #2ddfff 0px 0px 20px, 
+    #FF2D95 0px 0px 40px, 
+    #FF2D95 0px 0px 50px, 
+    #FF2D95 0px 0px 75px;
+    color: #FFFFFF;
+   */
+  }
+  
+  button:hover {
+    background-color: #1f0017;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+  }
+  
+  button.x::after,
+  button.o::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(#ff00ff, transparent);
+    opacity: 0.7;
+
+    filter: blur(10px);
+    transition: opacity 0.3s, filter 0.3s;
+  }
+  
+  button.x:hover::after,
+  button.o:hover::after {
+    opacity: 1;
+    filter: blur(5px);
+  }
+  
+  button.x::after {
+    box-shadow: 0 0 20px #ff00ff;
+  }
+  
+  button.o::after {
+    box-shadow: 0 0 20px #00ffff;
+  }
+  
+  .divResetGame {
+    margin-top: 17px;
+  }
+
+  .btnResetGame {
+    width: 100%;
+    color: white;
+    font-size: 29px;
+    box-shadow: -2px 2px 7px -2px #000
+  }
